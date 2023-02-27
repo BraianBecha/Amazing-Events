@@ -11,10 +11,11 @@ main{
 
 }
 .statstable{ 
-     empty-cells: hide;
+    
     border-collapse: collapse;
 }
 .statstable tr,td,th{
+    padding: 1em;
 
     border: 1.5px;
     border-style: solid;
