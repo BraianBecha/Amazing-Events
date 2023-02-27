@@ -11,6 +11,8 @@ main{
 
 }
 .statstable{ 
+    margin-left: 10vh;
+    margin-right: 10vh;
     margin-top: 3.5em;
     border-collapse: collapse;
 }
