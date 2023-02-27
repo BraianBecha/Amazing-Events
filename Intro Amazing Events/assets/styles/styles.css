@@ -2,8 +2,10 @@
 
 main{
     margin-bottom: 500px;
+   
+
 }
-.cardHome img{
+#imghome{
 
     box-shadow: -10px -10px 15px black;
 
@@ -51,6 +53,7 @@ main{
         border: 1.5px;
         border-style: solid;
         border-color: rgba(142, 142, 142, 0.7);
+        margin-top: 3.5em;
         
     
         
@@ -80,24 +83,82 @@ main{
     
     }
     
+    #cardHome{
+
+       min-width: 296px;
+       min-height: 427px;
     
     }
-/*
-@media only screen and (min-width:769px) {
-        
-    .cardHome{
-        width: 250px;
-        margin: 2em;
+    
+    
     }
+
+
+    @media only screen and (max-width:767px) and (min-width:768px) {
+
+        #cardHome{
+
+            min-width: 296px;
+       min-height: 427px;
+
+        }
+
+    }
+
+
+@media only screen and (min-width:1350px) {
+        
+    
     .detailBox{
-        
+    
         display: flex;
+        flex-direction: row;
+        justify-content:center;    
+        border: 1.5px;
+        border-style: solid;
+        border-color: rgba(142, 142, 142, 0.7);
+        margin-top: 5em;
+        
+    
+        
+    }
+    
+    .detailBox img{   
+        box-shadow: -10px -10px 15px black;
+        margin: 2em;
+        object-fit: cover;
+        width: 550px;
+        height: 550px;
+    
+        /*display: inline-flex;*/
+    
+    }
+    .detailBox div{
+        
+        margin: 2em;
+        border: 1.5px;
+        border-style: solid;
+        border-color: rgba(142, 142, 142, 0.7);
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content:center;
+        flex-direction: column;
+        align-items: center;  
+    
+    }
+    #cardHome{
+
+        max-width: 296px;
+        max-height: 427px;
     
     }
     
+    
+  
 }
 
 
 
 
-    */  
+ 
