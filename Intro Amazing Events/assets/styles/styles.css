@@ -10,6 +10,23 @@ main{
     box-shadow: -10px -10px 15px black;
 
 }
+.statstable{ 
+     empty-cells: hide;
+    border-collapse: collapse;
+}
+.statstable tr,td,th{
+
+    border: 1.5px;
+    border-style: solid;
+    border-color: rgba(142, 142, 142, 0.7);
+
+}
+.statstable th{
+    background-color:rgba(142, 142, 142, 0.7); ;
+}
+.statstable td{
+    min-height: 1em;
+}
 
 
 
