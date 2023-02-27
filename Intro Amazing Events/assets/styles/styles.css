@@ -7,15 +7,15 @@ main{
 }
 #imghome{
 
-    box-shadow: -10px -10px 15px black;
+    box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.782);
 
 }
 .statstable{ 
-    
+    margin-top: 3.5em;
     border-collapse: collapse;
 }
 .statstable tr,td,th{
-    padding: 1em;
+    padding: 0.5em;
 
     border: 1.5px;
     border-style: solid;
