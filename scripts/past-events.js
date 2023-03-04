@@ -173,3 +173,17 @@ var data = {
   };
 
 
+ let pastEvents =[];
+
+  for(i=0; i<data.events.length; i++){
+    if(data.events[i].date > data.currentDate)
+        {
+            pastEvents.push(data.events[i]);
+        }
+
+  }
+  console.log("-----------")
+  console.log("past.events")
+  for(i=0; i<pastEvents.length; i++){
+    console.log(pastEvents[i])
+  }

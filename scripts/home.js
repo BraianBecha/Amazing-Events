@@ -173,3 +173,15 @@ var data = {
   };
 
 
+ let homeEvents =[];
+
+  for(i=0; i<data.events.length; i++){
+    console.log(data.events[i]);
+    homeEvents.push(data.events[i]);
+
+  }
+  console.log("-----------")
+  console.log("home.events")
+  for(i=0; i<homeEvents.length; i++){
+    console.log(homeEvents[i])
+  }

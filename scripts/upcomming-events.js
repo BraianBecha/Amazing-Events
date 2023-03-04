@@ -173,3 +173,17 @@ var data = {
   };
 
 
+ let upcommingEvents =[];
+
+  for(i=0; i<data.events.length; i++){
+    if(data.events[i].date < data.currentDate)
+        {
+            upcommingEvents.push(data.events[i]);
+        }
+
+  }
+  console.log("-----------")
+  console.log("upcomming.events")
+  for(i=0; i<upcommingEvents.length; i++){
+    console.log(upcommingEvents[i])
+  }
