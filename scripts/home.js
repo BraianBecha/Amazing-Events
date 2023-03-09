@@ -5,8 +5,11 @@
 let cardContent = document.getElementById("contCard")
 let stringHTML
 
+
 function imprimirEventos(x) {
+  
   for (events of x) {
+    
     stringHTML += `<div class="cardHome card  mx-3 mb-3 rounded-0 p-3" >
 <img  src="${events.image}" class="imghome card-img-top rounded-0" alt="Cistume-Party">
 <div class="card-body">
