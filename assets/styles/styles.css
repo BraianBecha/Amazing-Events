@@ -43,7 +43,7 @@ main{
     flex-direction: column;
     justify-content:center;
     height: max-content;
-    width: max-content;
+    width: 90%;
    
         
     }
@@ -55,8 +55,7 @@ main{
     }
     .detailBox div{
         padding-top: 2em;
-        padding-right: 15%;
-        padding-left: 15%;
+       
 
     }
     .statstable{ 
