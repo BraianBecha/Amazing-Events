@@ -9,9 +9,9 @@ let idQuery = paramQery.get("id")
 console.log("paramQuery")
 console.log(paramQery)
 
-arrEvents=data.evetnts
 
-let eventDet = data.events.find(arrEvents => arrEvents._id == idQuery)
+
+let eventDet = data.events.find(x => x._id == idQuery)
 
 cardDetailCont.innerHTML= `
 

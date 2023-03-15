@@ -178,12 +178,14 @@ let mapToCardEvents = filteredEvents.map( x => (`<div class="cardHome card  mx-3
 <div class="card-body">
   <h5 class="card-title">${x.name}</h5>
   <p class="card-text">${x.description}</p>                                              
-  <p class="card-text"><small class="text-muted">Price: $${x.price}</small></p>
+  <p class="card-text"><small class="text-muted">Price: $ ${x.price}</small></p>
   <a href="details.html?id=${x._id}" class="btn btn-primary">More</a>
 </div>
 </div>`))
 return mapToCardEvents
 }
+
+
 
 
 
