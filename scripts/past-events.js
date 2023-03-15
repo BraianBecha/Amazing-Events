@@ -9,8 +9,6 @@
         }
 
   }
-  console.log("-----------")
-  console.log("past.events")
   for(i=0; i<pastEvents.length; i++){
     console.log(pastEvents[i])
   }
@@ -58,37 +56,36 @@ cat7.addEventListener("change", clickEnCheck7, false);
 
 
 function clickEnCheck1(){
-  console.log("el valor de check 1 cambio a "+ cat1.checked)
    resetString(pastEvents)
   
  }
  function clickEnCheck2(){
-  // console.log("el valor de check 2 cambio a "+ cat2.checked)      *** 
+  
   resetString(pastEvents)
   
  }
  function clickEnCheck3(){
-  // console.log("el valor de check 3 cambio a "+ cat3.checked)
+  
    resetString(pastEvents)
   
  }
  function clickEnCheck4(){
-   //console.log("el valor de check 4 cambio a "+ cat4.checked)
+  
    resetString(pastEvents)
   
  }
  function clickEnCheck5(){
-   //console.log("el valor de check 5 cambio a "+ cat5.checked)
+  
    resetString(pastEvents)
  
  }
  function clickEnCheck6(){
-   //console.log("el valor de check 6 cambio a "+ cat6.checked)
+  
    resetString(pastEvents)
   
  }
  function clickEnCheck7(){ 
-   //console.log("el valor de check 7 cambio a "+ cat7.checked)
+   
    resetString(pastEvents)
  
  }
