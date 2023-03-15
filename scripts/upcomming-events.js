@@ -31,7 +31,12 @@ let stringHTML
 let cardArrayTot = []
 
 let cardContent = document.getElementById("contCard")
-imprimir()
+imprimir(upcommingEvents)
+
+
+
+let strSearch = document.getElementById("searchValue")
+strSearch.addEventListener('input', ()=>{ filterByString(strSearch.value)} )
 
 
 cat1.addEventListener("change", clickEnCheck1, false);
@@ -45,116 +50,126 @@ cat7.addEventListener("change", clickEnCheck7, false);
 
 function clickEnCheck1(){
  console.log("el valor de check 1 cambio a "+ cat1.checked)
-  resetString()
+  resetString(upcommingEvents)
  
 }
 function clickEnCheck2(){
  // console.log("el valor de check 2 cambio a "+ cat2.checked)
- resetString()
+ resetString(upcommingEvents)
  
 }
 function clickEnCheck3(){
  // console.log("el valor de check 3 cambio a "+ cat3.checked)
-  resetString()
+  resetString(upcommingEvents)
  
 }
 function clickEnCheck4(){
   //console.log("el valor de check 4 cambio a "+ cat4.checked)
-  resetString()
+  resetString(upcommingEvents)
  
 }
 function clickEnCheck5(){
   //console.log("el valor de check 5 cambio a "+ cat5.checked)
-  resetString()
+  resetString(upcommingEvents)
 
 }
 function clickEnCheck6(){
   //console.log("el valor de check 6 cambio a "+ cat6.checked)
-  resetString()
+  resetString(upcommingEvents)
  
 }
 function clickEnCheck7(){ 
   //console.log("el valor de check 7 cambio a "+ cat7.checked)
-  resetString()
+  resetString(upcommingEvents)
 
 }
 
 
+function imprimir(x){
 
-function imprimir(){
-if(cat1.checked ==true){  
-  cardArray1=(arrayToCard(eventsFilter(upcommingEvents , "Food Fair")))
-  cardArrayTot= cardArrayTot.concat(cardArray1)
-  console.log("cardArray1")
-  console.log(cardArray1)
-}
-
-if(cat2.checked ==true){
-  cardArray2=(arrayToCard(eventsFilter(upcommingEvents , "Museum")))
-  
-  cardArrayTot= cardArrayTot.concat(cardArray2)
-  
- // console.log(cardArray2)
-}
-
-if(cat3.checked ==true){
-  cardArray3= arrayToCard(eventsFilter(upcommingEvents , "Costume Party"))
-  
-  cardArrayTot= cardArrayTot.concat(cardArray3)
-  
- // console.log(cardArray3)
-}
-if(cat4.checked ==true){
-  cardArray4=(arrayToCard(eventsFilter(upcommingEvents , "Music Concert")))
-  
-
-  cardArrayTot= cardArrayTot.concat(cardArray4)
-  //console.log(cardArray4)
-}
-if(cat5.checked ==true){
-  cardArray5=(arrayToCard(eventsFilter(upcommingEvents , "Race")))
-  
-
-  cardArrayTot= cardArrayTot.concat(cardArray5)
-  
-  //console.log(cardArray5)
-}
-
-if(cat6.checked ==true){
-  cardArray6=(arrayToCard(eventsFilter(upcommingEvents , "Book Exchange")))
-  
-  cardArrayTot= cardArrayTot.concat(cardArray6)
-  
-  //console.log(cardArray6)
-}
-
-if(cat7.checked ==true){
-  cardArray7=(arrayToCard(eventsFilter(upcommingEvents , "Cinema")))
-  
-  cardArrayTot= cardArrayTot.concat(cardArray7)
-  
-  //console.log(cardArray7)
-}
-           
-stringHTML=cardArrayTot.join(" ")
-cardContent.innerHTML=stringHTML
-
-}
-
-
-
-
-function resetString(){
-  console.log("entro a reset")
-  cardArrayTot=[]
-  stringHTML = ''
-
-  console.log("cardArrayTot")
-  console.log(cardArrayTot)
-  console.log("stringHTML")
-  console.log(stringHTML)
-  imprimir()
+  if(cat1.checked ==true){  
+    cardArray1=(arrayToCard(eventsFilter(x, "Food Fair")))
+    cardArrayTot= cardArrayTot.concat(cardArray1)
   }
+  
+  if(cat2.checked ==true){
+    cardArray2=(arrayToCard(eventsFilter(x, "Museum")))
+    
+    cardArrayTot= cardArrayTot.concat(cardArray2)
+    
+   
+  }
+  
+  if(cat3.checked ==true){
+    cardArray3= arrayToCard(eventsFilter(x , "Costume Party"))
+    
+    cardArrayTot= cardArrayTot.concat(cardArray3)
+    
+   
+  }
+  if(cat4.checked ==true){
+    cardArray4=(arrayToCard(eventsFilter(x , "Music Concert")))
+    
+  
+    cardArrayTot= cardArrayTot.concat(cardArray4)
+    
+  }
+  if(cat5.checked ==true){
+    cardArray5=(arrayToCard(eventsFilter(x , "Race")))
+    
+  
+    cardArrayTot= cardArrayTot.concat(cardArray5)
+    
+  
+  }
+  
+  if(cat6.checked ==true){
+    cardArray6=(arrayToCard(eventsFilter(x , "Book Exchange")))
+    
+    cardArrayTot= cardArrayTot.concat(cardArray6)
+    
+   
+  }
+  
+  if(cat7.checked ==true){
+    cardArray7=(arrayToCard(eventsFilter(x , "Cinema")))
+    
+    cardArrayTot= cardArrayTot.concat(cardArray7)
+    
+   
+  }
+   
+if (cardArrayTot.length==0){
+  
+  cardContent.innerHTML='<h2> Humm... No items match the search criteria. </h2>'
+  return
+}
+             
+  stringHTML=cardArrayTot.join(" ")
+  cardContent.innerHTML=stringHTML
+  
+  }
+  
+
+
+
+  function filterByString(x){
+    let arrayFiltrado = upcommingEvents.filter(elemento => elemento.name.toLowerCase().includes(x.toLowerCase()))
+    resetString(arrayFiltrado)
+   
+   }
+   
+   
+   
+   
+   function resetString(x){  
+     cardArrayTot=[]
+     stringHTML = ''
+     imprimir(x)
+     }
+   
+   
+   
 
 
 
@@ -174,7 +189,7 @@ let mapToCardEvents = filteredEvents.map( x => (`<div class="cardHome card  mx-3
   <h5 class="card-title">${x.name}</h5>
   <p class="card-text">${x.description}</p>                                              
   <p class="card-text"><small class="text-muted">Price: $${x.price}</small></p>
-  <a href="details.html" class="btn btn-primary">More</a>
+  <a href="details.html?id=${x._id}" class="btn btn-primary">More</a>
 </div>
 </div>`))
 return mapToCardEvents
