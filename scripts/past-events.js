@@ -3,7 +3,7 @@
  let pastEvents =[];
 
   for(i=0; i<data.events.length; i++){
-    if(data.events[i].date > data.currentDate)
+    if(data.events[i].date < data.currentDate)
         {
             pastEvents.push(data.events[i]);
         }

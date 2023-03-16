@@ -2,7 +2,7 @@
  let upcommingEvents =[];
 
   for(i=0; i<data.events.length; i++){
-    if(data.events[i].date < data.currentDate)
+    if(data.events[i].date > data.currentDate)
         {
             upcommingEvents.push(data.events[i]);
         }

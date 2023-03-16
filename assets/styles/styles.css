@@ -30,6 +30,9 @@ main{
 .statstable td{
     min-height: 1em;
 }
+body{
+    overflow-x: hidden;
+ }
 
 
 
