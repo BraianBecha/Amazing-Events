@@ -1,6 +1,15 @@
 
  let upcommingEvents =[];
 
+ fetch("https://mindhub-xj03.onrender.com/api/amazing")
+.then ((resp)=> resp.json())
+ .then(resp2 => { 
+  console.log(resp2)
+  data  = resp2 
+
+
+
+
   for(i=0; i<data.events.length; i++){
     if(data.events[i].date > data.currentDate)
         {
@@ -8,6 +17,9 @@
         }
 
   }
+  imprimir(upcommingEvents)
+
+})
 
 
 let cat1 = document.getElementById("Category1")
@@ -31,7 +43,7 @@ let stringHTML
 let cardArrayTot = []
 
 let cardContent = document.getElementById("contCard")
-imprimir(upcommingEvents)
+
 
 
 
@@ -87,7 +99,7 @@ function clickEnCheck7(){
 function imprimir(x){
 
   if(cat1.checked ==true){  
-    cardArray1=(arrayToCard(eventsFilter(x, "Food Fair")))
+    cardArray1=(arrayToCard(eventsFilter(x, "Food")))
     cardArrayTot= cardArrayTot.concat(cardArray1)
   }
   
@@ -100,14 +112,14 @@ function imprimir(x){
   }
   
   if(cat3.checked ==true){
-    cardArray3= arrayToCard(eventsFilter(x , "Costume Party"))
+    cardArray3= arrayToCard(eventsFilter(x , "Party"))
     
     cardArrayTot= cardArrayTot.concat(cardArray3)
     
    
   }
   if(cat4.checked ==true){
-    cardArray4=(arrayToCard(eventsFilter(x , "Music Concert")))
+    cardArray4=(arrayToCard(eventsFilter(x , "Concert")))
     
   
     cardArrayTot= cardArrayTot.concat(cardArray4)
@@ -123,7 +135,7 @@ function imprimir(x){
   }
   
   if(cat6.checked ==true){
-    cardArray6=(arrayToCard(eventsFilter(x , "Book Exchange")))
+    cardArray6=(arrayToCard(eventsFilter(x , "Books")))
     
     cardArrayTot= cardArrayTot.concat(cardArray6)
     
@@ -138,11 +150,11 @@ function imprimir(x){
    
   }
    
-if (cardArrayTot.length==0){
-  
-  cardContent.innerHTML='<h2> Humm... No items match the search criteria. </h2>'
-  return
-}
+  if (cardArrayTot.length==0){
+    
+    cardContent.innerHTML='<h2> Humm... No items match the search criteria. </h2>'
+    return
+  }
              
   stringHTML=cardArrayTot.join(" ")
   cardContent.innerHTML=stringHTML
