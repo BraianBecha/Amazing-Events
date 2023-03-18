@@ -246,12 +246,6 @@ body{
     
     }
 
-    .cardHome{
-
-        max-width: 296px;
-        max-height: 427px;
-    
-    }
     .container1{
         width: 100%;
         padding-left: 5%;
@@ -263,14 +257,16 @@ body{
         
         flex-wrap: wrap;
     }
-
-    
-       
-    
+  
     .cardHome{
         width: 296px;
              height: 427px; 
     
+    }
+
+    .cardHome img{
+        height:200 ;
+        width: 260;
     }
     .cardHome .card-body .card-text{
         overflow: hidden;
