@@ -196,7 +196,7 @@ let mapToCardEvents = filteredEvents.map( x => (`<div class="cardHome card  mx-3
 <img  src="${x.image}" class="imghome card-img-top rounded-0" alt="">
 <div class="card-body">
   <h5 class="card-title">${x.name}</h5>
-  <p class="card-text">${x.description}</p>                                              
+  <p class="card-text text-truncate">${x.description}</p>                                              
   <p class="card-text"><small class="text-muted">Price: $${x.price}</small></p>
   <a href="details.html?id=${x._id}" class="btn btn-primary">More</a>
 </div>

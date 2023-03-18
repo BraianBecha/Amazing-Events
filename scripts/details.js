@@ -23,8 +23,9 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
 console.log(eventDet)
 cardDetailCont.innerHTML= `
 <div class="detailBox">
-        
+        <div>
         <img src="${eventDet.image}" alt="">
+        </div>
         <div>
         <h1>${eventDet.name}</h1>
           <h2>Place: ${eventDet.place}</h2>
