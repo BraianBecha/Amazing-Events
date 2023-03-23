@@ -4,7 +4,6 @@
  fetch("https://mindhub-xj03.onrender.com/api/amazing")
 .then ((resp)=> resp.json())
  .then(resp2 => { 
-  console.log(resp2)
   data  = resp2 
 
 

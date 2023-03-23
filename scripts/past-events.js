@@ -4,10 +4,8 @@
  fetch("https://mindhub-xj03.onrender.com/api/amazing")
  .then ((resp)=> resp.json())
   .then(resp2 => { 
-   console.log(resp2)
+   
    data  = resp2 
- 
- 
  
  
    for(i=0; i<data.events.length; i++){
@@ -184,8 +182,7 @@ function clickEnCheck1(){
 
 
 function eventsFilter(rawEvents, cat){
-  console.log("cat")
-  console.log(cat)
+  
   let filteredEvents = rawEvents.filter(x => x.category == cat && x.id!=0)
   return filteredEvents
 }
