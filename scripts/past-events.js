@@ -26,13 +26,22 @@
   
   
 
-  let cat1 = document.getElementById("Category1")
+let cat1 = document.getElementById("Category1")
 let cat2 = document.getElementById("Category2")
 let cat3 = document.getElementById("Category3")
 let cat4 = document.getElementById("Category4")
 let cat5 = document.getElementById("Category5")
 let cat6 = document.getElementById("Category6")
 let cat7 = document.getElementById("Category7")
+
+
+cat1. checked= false
+cat2. checked= false
+cat3. checked= false
+cat4. checked= false
+cat5. checked= false
+cat6. checked= false
+cat7. checked= false
 
 
 let cardArray1
@@ -62,6 +71,7 @@ cat5.addEventListener("change", clickEnCheck5, false);
 cat6.addEventListener("change", clickEnCheck6, false);
 cat7.addEventListener("change", clickEnCheck7, false);
 
+console.log("2"+cat1.checked)
 
 function clickEnCheck1(){
    resetString(pastEvents)
@@ -100,12 +110,12 @@ function clickEnCheck1(){
 
  function imprimir(x){
 
-  if(cat1.checked ==true){  
+  if(cat1.checked == true){  
     cardArray1=(arrayToCard(eventsFilter(x, "Food")))
     cardArrayTot= cardArrayTot.concat(cardArray1)
   }
   
-  if(cat2.checked ==true){
+  if(cat2.checked == true){
     cardArray2=(arrayToCard(eventsFilter(x, "Museum")))
     
     cardArrayTot= cardArrayTot.concat(cardArray2)
@@ -113,21 +123,21 @@ function clickEnCheck1(){
    
   }
   
-  if(cat3.checked ==true){
+  if(cat3.checked == true){
     cardArray3= arrayToCard(eventsFilter(x , "Party"))
     
     cardArrayTot= cardArrayTot.concat(cardArray3)
     
    
   }
-  if(cat4.checked ==true){
+  if(cat4.checked == true){
     cardArray4=(arrayToCard(eventsFilter(x , "Concert")))
     
   
     cardArrayTot= cardArrayTot.concat(cardArray4)
     
   }
-  if(cat5.checked ==true){
+  if(cat5.checked == true){
     cardArray5=(arrayToCard(eventsFilter(x , "Race")))
     
   
@@ -136,7 +146,7 @@ function clickEnCheck1(){
   
   }
   
-  if(cat6.checked ==true){
+  if(cat6.checked == true){
     cardArray6=(arrayToCard(eventsFilter(x , "Books")))
     
     cardArrayTot= cardArrayTot.concat(cardArray6)
@@ -144,7 +154,7 @@ function clickEnCheck1(){
    
   }
   
-  if(cat7.checked ==true){
+  if(cat7.checked == true){
     cardArray7=(arrayToCard(eventsFilter(x , "Cinema")))
     
     cardArrayTot= cardArrayTot.concat(cardArray7)
