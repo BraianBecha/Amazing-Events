@@ -100,6 +100,7 @@ dataToHTML2= stringTabla3.join(' ')
 col3.innerHTML=dataToHTML2
 
 
+
                  }
 )
 

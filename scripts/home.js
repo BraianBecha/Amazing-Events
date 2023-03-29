@@ -6,13 +6,6 @@ let cat5 = document.getElementById("Category5")
 let cat6 = document.getElementById("Category6")
 let cat7 = document.getElementById("Category7")
 
-cat1. checked= false
-cat2. checked= false
-cat3. checked= false
-cat4. checked= false
-cat5. checked= false
-cat6. checked= false
-cat7. checked= false
 
 let cardArray1
 let cardArray2
@@ -28,6 +21,7 @@ let cardArraySearch
 let searchCriteria = []
 
 let cardContent = document.getElementById("contCard")
+let seeAllButton = document.getElementById("seeAllButton")
 
 let data
 
@@ -38,8 +32,18 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
   data = resp2 
 
 
-
+seeAllButton.style.display="none";
 imprimir(data.events)
+
+
+cat1. checked= false
+cat2. checked= false
+cat3. checked= false
+cat4. checked= false
+cat5. checked= false
+cat6. checked= false
+cat7. checked= false
+
 })
 
 let strSearch = document.getElementById("searchValue")
@@ -57,10 +61,12 @@ function clickEnCheck1(){
  
   resetString(data.events)
  
+ 
 }
 function clickEnCheck2(){
  
  resetString(data.events)
+ s
  
 }
 function clickEnCheck3(){
@@ -171,6 +177,7 @@ function filterByString(x){
 
 
 function resetString(x){  
+  seeAllButton.style.display="block";
   cardArrayTot=[]
   stringHTML = ''
   imprimir(x)
@@ -200,7 +207,31 @@ return mapToCardEvents
 }
 
 
+function seeAllAgain(){
+  
+  seeAllButton.style.display="none";
 
+  cat1.checked= true
+  cat2.checked= true
+  cat3.checked= true
+  cat4.checked= true
+  cat5.checked= true
+  cat6.checked= true
+  cat7.checked= true
+  imprimir(data.events)
+  
+cat1. checked= false
+cat2. checked= false
+cat3. checked= false
+cat4. checked= false
+cat5. checked= false
+cat6. checked= false
+cat7. checked= false
+  
+ 
+  
+  }
+  
 
 
 

@@ -16,8 +16,18 @@
 
   }
 
-   imprimir(pastEvents)
- 
+  seeAllButton.style.display="none";
+  imprimir(pastEvents)
+
+
+  cat1.checked= false
+  cat2.checked= false
+  cat3.checked= false
+  cat4.checked= false
+  cat5.checked= false
+  cat6.checked= false
+  cat7.checked= false
+
  })
 
  
@@ -35,13 +45,6 @@ let cat6 = document.getElementById("Category6")
 let cat7 = document.getElementById("Category7")
 
 
-cat1. checked= false
-cat2. checked= false
-cat3. checked= false
-cat4. checked= false
-cat5. checked= false
-cat6. checked= false
-cat7. checked= false
 
 
 let cardArray1
@@ -56,7 +59,7 @@ let stringHTML
 let cardArrayTot = []
 
 let cardContent = document.getElementById("contCard")
-imprimir(pastEvents)
+
 
 
 
@@ -185,6 +188,7 @@ function clickEnCheck1(){
    
    
    function resetString(x){  
+    seeAllButton.style.display="block";
      cardArrayTot=[]
      stringHTML = ''
      imprimir(x)
@@ -210,3 +214,29 @@ let mapToCardEvents = filteredEvents.map( x => (`<div class="cardHome card  mx-3
 </div>`))
 return mapToCardEvents
 }
+
+
+function seeAllAgain(){
+  
+  seeAllButton.style.display="none";
+  
+  cat1.checked= true
+  cat2.checked= true
+  cat3.checked= true
+  cat4.checked= true
+  cat5.checked= true
+  cat6.checked= true
+  cat7.checked= true
+  imprimir(pastEvents)
+  
+cat1. checked= false
+cat2. checked= false
+cat3. checked= false
+cat4. checked= false
+cat5. checked= false
+cat6. checked= false
+cat7. checked= false
+  
+ 
+  
+  }

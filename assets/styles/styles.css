@@ -5,6 +5,10 @@ main{
    
 
 }
+#seeAllButton{
+display: none;
+}
+
 .imghome{
 
     box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.782);
@@ -16,7 +20,15 @@ main{
     margin-top: 3.5em;
     border-collapse: collapse;
 }
-.statstable tr,td,th{
+
+.statstable td{
+    padding: 0.5em;
+    border: 1.5px;
+    border-style: solid;
+    border-color: rgba(142, 142, 142, 0.7);
+
+}
+.statstable tr{    
     padding: 0.5em;
     border: 1.5px;
     border-style: solid;
@@ -29,6 +41,8 @@ main{
 .statstable td{
     min-height: 1em;
 }
+
+
 body{
     overflow-x: hidden;
  }
